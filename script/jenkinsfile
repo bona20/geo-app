@@ -4,7 +4,7 @@ pipeline{
      maven 'M2_HOME'
     } 
     stages{
-        stage('sona-scan') {
+        stage("sona-scan"){
             steps{
                 withSonarQubeEnv('sonaqube'){
                 sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=bona20_geo-app'
